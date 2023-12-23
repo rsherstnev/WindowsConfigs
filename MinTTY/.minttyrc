@@ -1,7 +1,7 @@
 Locale=ru_RU
 Charset=UTF-8
 Language=ru
-ThemeFile=gruvbox
+ThemeFile=dracula
 Transparency=off
 CursorType=underscore
 Font=Lucida Console
