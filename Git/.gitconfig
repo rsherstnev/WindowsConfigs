@@ -1,0 +1,27 @@
+[user]
+	name = NordeN
+	email = sher-rom2013@yandex.ru
+[core]
+	longpaths = true
+	quotepath = off
+	autocrlf = true
+	safecrlf = warn
+	editor = vim
+[merge]
+	tool = winmerge
+[mergetool]
+    prompt = false
+    keepBackup = false
+    keepTemporaries = false
+[mergetool "winmerge"]
+    name = WinMerge
+    trustExitCode = true
+    cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
+[diff]
+	tool = winmerge
+[difftool "winmerge"]
+    name = WinMerge
+    trustExitCode = true
+    cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
+[alias]
+	lore = log --all --pretty=format:'%C(174)%h%C(auto)%d %C(114)[%s]'
