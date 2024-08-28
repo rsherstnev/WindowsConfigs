@@ -7,6 +7,14 @@
 	autocrlf = true
 	safecrlf = warn
 	editor = vim
+[diff]
+	tool = winmerge
+[difftool "winmerge"]
+	name = WinMerge
+	trustExitCode = true
+	cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
 	tool = winmerge
 [mergetool]
@@ -17,11 +25,14 @@
 	name = WinMerge
 	trustExitCode = true
 	cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
-[diff]
-	tool = winmerge
-[difftool "winmerge"]
-	name = WinMerge
-	trustExitCode = true
-	cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
+[mergetool "vscode"]
+  cmd = code --wait $MERGED
 [alias]
 	lore = log --all --pretty=format:'%C(174)%h%C(auto)%d %C(114)[%s]'
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[init]
+	defaultBranch = master
