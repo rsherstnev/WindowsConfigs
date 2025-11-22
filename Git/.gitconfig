@@ -1,38 +1,38 @@
 [user]
-	name = NordeN
-	email = sher-rom2013@yandex.ru
+    name = NordeN
+    email = sher-rom2013@yandex.ru
 [core]
-	longpaths = true
-	quotepath = off
-	autocrlf = true
-	safecrlf = warn
-	editor = vim
+    longpaths = true
+    quotepath = off
+    autocrlf = true
+    safecrlf = warn
+    editor = vim
 [diff]
-	tool = winmerge
+    tool = winmerge
 [difftool "winmerge"]
-	name = WinMerge
-	trustExitCode = true
-	cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
+    name = WinMerge
+    trustExitCode = true
+    cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE
 [difftool "vscode"]
-	cmd = code --wait --diff $LOCAL $REMOTE
+    cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
-	tool = winmerge
+    tool = winmerge
 [mergetool]
-	prompt = false
-	keepBackup = false
-	keepTemporaries = false
+    prompt = false
+    keepBackup = false
+    keepTemporaries = false
 [mergetool "winmerge"]
-	name = WinMerge
-	trustExitCode = true
-	cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
+    name = WinMerge
+    trustExitCode = true
+    cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
 [mergetool "vscode"]
-  cmd = code --wait $MERGED
+    cmd = code --wait $MERGED
 [alias]
-	lore = log --all --pretty=format:'%C(174)%h%C(auto)%d %C(114)[%s]'
+    lore = log --all --pretty=format:'%C(green)%h %C(blue)%ad%C(auto)%d %C(white)[%s]' --date=format:'%d.%m.%Y %H:%M:%S'
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
 [init]
-	defaultBranch = master
+    defaultBranch = master
